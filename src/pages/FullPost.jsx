@@ -10,7 +10,6 @@ import axios from '../axios';
 export const FullPost = () => {
   const [postData, setPostData] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  console.log('postData: ', postData);
   const { id } = useParams();
 
   React.useEffect(() => {

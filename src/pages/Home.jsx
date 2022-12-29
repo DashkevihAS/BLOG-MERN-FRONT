@@ -14,7 +14,6 @@ import { CommentsBlock } from '../components/CommentsBlock';
 export const Home = () => {
   const dispatch = useDispatch();
   const { posts, tags } = useSelector((state) => state.posts);
-  console.log('tags: ', tags);
 
   const isPostsLoading = posts.status === 'loading';
   const isTagsLoading = posts.status === 'loading';
