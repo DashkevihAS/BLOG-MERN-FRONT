@@ -4,7 +4,7 @@ const { configureStore } = require('@reduxjs/toolkit');
 
 const store = configureStore({
   reducer: {
-    post: postsReduser,
+    posts: postsReduser,
   },
 });
 
