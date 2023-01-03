@@ -31,6 +31,10 @@ export const Post = ({
 
   const onClickRemove = () => {};
 
+  const imageSrc = imageUrl.startsWith('http')
+    ? imageUrl
+    : `http://localhost:4444${imageUrl}`;
+
   return (
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
@@ -45,10 +49,10 @@ export const Post = ({
           </IconButton>
         </div>
       )}
-      {imageUrl && (
+      {imageSrc && (
         <img
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
-          src={imageUrl}
+          src={imageSrc}
           alt={title}
         />
       )}
