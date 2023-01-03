@@ -33,10 +33,9 @@ export const Post = ({
   }
 
   const onClickRemove = () => {
-    dispatch(fetchRemovePost(id));
-    // if (window.confirm('Вы действительно хотите удалить пост?')) {
-    //   dispatch(fetchRemovePost(id));
-    // }
+    if (window.confirm('Вы действительно хотите удалить пост?')) {
+      dispatch(fetchRemovePost(id));
+    }
   };
 
   const imageSrc = imageUrl.startsWith('http')
